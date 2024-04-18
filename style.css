@@ -1,156 +1,121 @@
-/*General CSS*/
-:root {
-  --color1: #565d94;
-  --color2: #302b3d;
-  --color3: #e3d5dd;
-  --color4: #9e97bf;
-  --color5: #fac5c8;
-  --color6: #d1b6d1;
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');/*Fuente*/
+/*Estilos generales*/
+:root{
+    --color1 : #e020ad ;
+    --color2 : #f07dd9 ;
+    --color3 : #3c045e ;
+    --color4 : #861267 ;
+    --color5 : #890f70 ;
+    --neonAzul: #45fedf;
+}
+body{
+    display: flex;
+    padding: 0;
+    margin: 0;
+    background-color: var(--color3);
+    color: white;
+    font-family: "Jersey 10", sans-serif;
+    font-size: large;
+    scroll-behavior: smooth;
 }
 
-* {
-  scroll-behavior: smooth;
-  font-family: "Exo", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
-}
-
-body {
-  padding: 0;
-  margin: 0;
-  background-image: url("IMG/montanas-en-bosque-minimalista-flat_2560x1440_xtrafondos.com.jpg");
-  background-size: cover;
-  color: var(--color2);
-}
-
-a {
-  text-decoration: none;
-}
-
-/* Estilos CSS aquí */
-#navbar {
-  display: flex;
-  justify-content: space-around;
-  position: sticky;
-  top: 0;
-  left: 0;
-  background-color: var(--color1);
-  padding: 10px;
-  text-align: center;
-}
-
-#navbar a {
-  color: var(--color2);
-  width: 10%;
-  transition: transform 0.3s ease, background-color 0.3s ease, border-bottom 0.3s ease;
-}
-
-#navbar a:hover {
-  transform: translateY(-8px);
-  border-bottom: solid white 1px;
-  color: white;
-}
-
-#wellcome-section {
-  display: flex;
-  text-align: center;
-  padding: 50px;
-  width: 92.7%;
-  height: 250px;
-}
-
-.perfilph{
-  width: 300px;
-  height: auto;
-  background-color: var(--color2);
-  border-radius: 10px;
-  z-index: -1;
-}
-
-.perfil{
-  width: 200px;
-  border-radius: 50%;
-  margin-top: 40px;
-}
-
-.perfil, .perfilph:hover{
-  transform: translateY(-20px);
-}
-
-.perfil, .perfilph{
-  transition: transform 0.3s ease;
-}
-
-.wellcome-text{
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-#projects{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.title{
-  text-align: center;
-  background-color: #d1b6d1c6;
-  width: fit-content;
-  padding: 0 10px 0 10px;
-  border-radius: 5px;
-}
-
-.project-title{
-  display: inline-block;
-  text-align: center;
-  background-color: var(--color4);
-  width: 300px;
-  height: auto;
-  border-radius: 10px;
-  padding: 15px;
-  margin: 10px;
-}
-
-#project-img {
-  width: 12em;
-  border-radius: 10px;
-  cursor: pointer;
-}
-
-footer{
-  background-color: var(--color3);
-  
-}
-
-.social-links {
-  display: flex;
-  flex-direction: row;
-}
-
-.logo {
-  margin-top: 10px; /* Espacio entre los elementos */
-}
-
-.logo img {
-  width: 50px;
-  height: 50px;
-}
-
-
-
-/* Media Query para dispositivos con una anchura máxima de 600px */
-@media (max-width: 600px) {
-  #welcome-section {
-    padding: 20px;
-  }
-
-  #projects {
-    padding: 20px;
-  }
-
-  .project-tile {
-    margin: 10px;
+a{
+    text-decoration: none;
+    color: white;
     padding: 10px;
-  }
+}
+
+h2{
+    text-align: center;
+}
+
+hr{
+    width: 45%;
+    border-color: var(--color2);
+}
+
+/*Barra lateral*/
+header{    
+    display: fixed;
+    width: 25%;
+    height: 100vh;
+    padding: 10px;
+    border-right: 2px solid var(--neonAzul);
+}
+
+.links-web{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 40px;
+    
+}
+
+.links-menu{
+    transition: color 0.8s ease-in-out, transform 0.8s ease-in-out, border 0.8s ease-in-out;
+}
+
+.links-menu:hover{
+    color: var(--neonAzul);
+    transform: scale(1.1);
+    border: 1px solid var(--neonAzul);
+    border-radius: 10px;
+}
+
+.logo{
+    width: 80%;
+    border-radius: 50%;
+    margin-left: 25px;
+}
+
+.links-network{    
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+.social-network{
+    width: 40px;
+    transition: transform 0.5s ease-in-out, filter 0.5s ease-in;
+    align-self: flex-end;
+}
+
+.social-network:hover{
+    transform: scale(1.1);
+    filter: drop-shadow(
+        0 0 10px var(--neonAzul));
+}
+
+/*Cuerpo*/
+main{
+    margin-left: 50px;
+}
+
+.sobre-mi{
+    display: flex;
+}
+
+.contenido{
+    flex: 1;
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+/*Proyectos*/
+.proyectos{
+    background-color: black;
+    width: 50%;
+    height: auto;
+    display: flex;
+}
+
+.proyectos{
+
+}
+
+.fotoproyecto{
+    width: 60%;
 }
