@@ -8,6 +8,7 @@
     --color3 : #3c045e ;
     --color4 : #861267 ;
     --color5 : #890f70 ;
+    --color6 : #2d0347;
     --neonAzul: #45fedf;
     --neonVerde: #2ef8a0;
 }
@@ -35,7 +36,7 @@ h2{
 }
 
 hr{
-    width: 45%;
+    width: 100%;
     border-color: var(--color2);
 }
 
@@ -49,7 +50,7 @@ nav{
     width: 20%;
     height: 100vh;
     padding: 10px;
-    background-color: var(--color4);
+    background-color: var(--color6);
 }
 
 .fotoperfil{
@@ -107,14 +108,108 @@ nav{
 
 /*Cuerpo*/
 main{
+    width: 77%;
     margin-left: 22%;
 }
 
-.title-aboutMe{
+.title{
     color: var(--neonVerde);
+    font-size: x-large;
 }
 
 .aboutMe{
-    padding: 10px;
+    font-size: x-large;
 }
 
+/*Proyectos*/
+.proyectos{
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+position: relative;
+display: flex;
+align-items: flex-end;
+width: 250px;
+height: 200px;
+padding: 30px 25px;
+background:#fff;
+box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
+transition: all 0.5s ease;
+border-radius: 45px;
+}
+
+
+.card:hover {
+    transform: translateY(10px);
+}
+
+
+.card:after {
+content:"";
+position: absolute;
+top: 0;
+left: 0;
+display: block;
+width: 100%;
+height: 100%;
+background: linear-gradient(to bottom,
+var(--color2), var(--neonVerde));
+transition: all 0.5s;
+opacity: 0;
+border-radius: 40px;
+}
+
+.card:hover:after {
+    opacity: 1;
+}
+
+.card > img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+position: absolute;
+top: 0;
+left: 0;
+border-radius: 40px;
+}
+
+.card .info {
+position: relative;
+z-index: 3;
+color: var(--color4);
+opacity: 0;
+transform: translateY(1px); transition: all 0.5s;
+}
+
+.card:hover .info {
+    opacity: 1;
+}
+
+.card .info h1 {
+    font-size: 1.4rem;
+    margin: 0;
+}
+
+.card .info p{
+    font-weight: bolder;
+    font-size: 1.2rem;  
+    line-height: 130%;
+}
+
+.card .info .btn {
+    text-decoration: none; padding: 0.5rem 1rem; color: #4b5563; font-size: 0.85rem;
+    transition: all 0.3s ease-in;
+}
+
+.card .info .btn:hover {
+    box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
+    background-color: #4b5563;
+    color: #fff;
+}
+
+.logos-tech{
+    width: 40px;
+
+}
