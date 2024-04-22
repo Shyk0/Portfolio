@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');/*Fuente*/
+/*Fuente*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 /*Estilos generales*/
 :root{
     --color1 : #e020ad ;
@@ -7,6 +9,7 @@
     --color4 : #861267 ;
     --color5 : #890f70 ;
     --neonAzul: #45fedf;
+    --neonVerde: #2ef8a0;
 }
 body{
     display: flex;
@@ -14,8 +17,10 @@ body{
     margin: 0;
     background-color: var(--color3);
     color: white;
-    font-family: "Jersey 10", sans-serif;
-    font-size: large;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
     scroll-behavior: smooth;
 }
 
@@ -34,50 +39,64 @@ hr{
     border-color: var(--color2);
 }
 
+strong{
+    color: var(--neonVerde);
+}
+
 /*Barra lateral*/
-header{    
-    display: fixed;
-    width: 25%;
+nav{
+    position: fixed;
+    width: 20%;
     height: 100vh;
     padding: 10px;
-    border-right: 2px solid var(--neonAzul);
+    background-color: var(--color4);
 }
+
+.fotoperfil{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo{
+    width: 50%;
+    border-radius: 50%;
+}
+
 
 .links-web{
     display: flex;
     flex-direction: column;
     text-align: center;
     padding: 40px;
-    
+    gap: 10px;
 }
 
 .links-menu{
     transition: color 0.8s ease-in-out, transform 0.8s ease-in-out, border 0.8s ease-in-out;
+    
 }
 
 .links-menu:hover{
     color: var(--neonAzul);
     transform: scale(1.1);
-    border: 1px solid var(--neonAzul);
-    border-radius: 10px;
-}
-
-.logo{
-    width: 80%;
-    border-radius: 50%;
-    margin-left: 25px;
+    border-bottom: 1px solid var(--neonAzul);
 }
 
 .links-network{    
     display: flex;
     flex-direction: row;
     align-items: flex-end;
+    justify-content: center;
+}
+
+.logos{
+    align-self: end;
 }
 
 .social-network{
-    width: 40px;
+    width: 60px;
     transition: transform 0.5s ease-in-out, filter 0.5s ease-in;
-    align-self: flex-end;
 }
 
 .social-network:hover{
@@ -88,34 +107,14 @@ header{
 
 /*Cuerpo*/
 main{
-    margin-left: 50px;
+    margin-left: 22%;
 }
 
-.sobre-mi{
-    display: flex;
+.title-aboutMe{
+    color: var(--neonVerde);
 }
 
-.contenido{
-    flex: 1;
+.aboutMe{
+    padding: 10px;
 }
 
-ul{
-    list-style-type: none;
-    padding: 0;
-}
-
-/*Proyectos*/
-.proyectos{
-    background-color: black;
-    width: 50%;
-    height: auto;
-    display: flex;
-}
-
-.proyectos{
-
-}
-
-.fotoproyecto{
-    width: 60%;
-}
