@@ -40,9 +40,6 @@ hr{
     border-color: var(--color2);
 }
 
-strong{
-    color: var(--neonVerde);
-}
 
 /*Barra lateral*/
 nav{
@@ -112,30 +109,44 @@ main{
     margin-left: 22%;
 }
 
-.title{
-    color: var(--neonVerde);
-    font-size: x-large;
-}
+
 
 .aboutMe{
     font-size: x-large;
 }
 
+.title-aboutMe{
+    width: fit-content;
+}
+
+.title-aboutMe, strong, .title-projects{
+    filter: drop-shadow(0 0 0.75rem var(--color2));
+    color: var(--neonAzul);
+    right: 10000000px;
+}
+
 /*Proyectos*/
 .proyectos{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+}
+
+
+.cards{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
 }
 
 .card {
 position: relative;
 display: flex;
 align-items: flex-end;
-width: 250px;
-height: 200px;
+width: 225px;
+height: 180px;
 padding: 30px 25px;
 background:#fff;
-box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
+box-shadow: 0px 7px 10px var(--neonAzul);
 transition: all 0.5s ease;
 border-radius: 45px;
 }
@@ -178,7 +189,6 @@ border-radius: 40px;
 .card .info {
 position: relative;
 z-index: 3;
-color: var(--color4);
 opacity: 0;
 transform: translateY(1px); transition: all 0.5s;
 }
@@ -198,6 +208,10 @@ transform: translateY(1px); transition: all 0.5s;
     line-height: 130%;
 }
 
+.card .info p, h1{
+    color: var(--color3);
+}
+
 .card .info .btn {
     text-decoration: none; padding: 0.5rem 1rem; color: #4b5563; font-size: 0.85rem;
     transition: all 0.3s ease-in;
@@ -211,5 +225,5 @@ transform: translateY(1px); transition: all 0.5s;
 
 .logos-tech{
     width: 40px;
-
 }
+
