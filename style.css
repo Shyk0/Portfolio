@@ -13,7 +13,6 @@
     --neonVerde: #2ef8a0;
 }
 body{
-    display: flex;
     padding: 0;
     margin: 0;
     background-color: var(--color3);
@@ -28,7 +27,11 @@ body{
 a{
     text-decoration: none;
     color: white;
-    padding: 10px;
+    transition: color 0.8s ease;
+}
+
+a:hover{
+    color: var(--color2);
 }
 
 h2{
@@ -36,18 +39,26 @@ h2{
 }
 
 hr{
-    width: 100%;
+    left: 0;
+    margin-top: 50px;
+    width: 80%;
     border-color: var(--color2);
+    filter: drop-shadow(0 0 0.75rem var(--color2));
+    color: var(--neonAzul);
 }
 
 
 /*Barra lateral*/
 nav{
+    top: 0;
+    left: 0;
     position: fixed;
     width: 20%;
-    height: 100vh;
+    height: 100%;
     padding: 10px;
     background-color: var(--color6);
+    z-index: 1000;
+    border-right: 1px dotted var(--color2);
 }
 
 .fotoperfil{
@@ -71,6 +82,7 @@ nav{
 }
 
 .links-menu{
+    padding: 10px;
     transition: color 0.8s ease-in-out, transform 0.8s ease-in-out, border 0.8s ease-in-out;
     
 }
@@ -81,11 +93,12 @@ nav{
     border-bottom: 1px solid var(--neonAzul);
 }
 
-.links-network{    
+.links-network{ 
+    position: absolute; 
     display: flex;
     flex-direction: row;
-    align-items: flex-end;
     justify-content: center;
+    bottom: 30px;
 }
 
 .logos{
@@ -95,6 +108,7 @@ nav{
 .social-network{
     width: 60px;
     transition: transform 0.5s ease-in-out, filter 0.5s ease-in;
+    padding: 10px;
 }
 
 .social-network:hover{
@@ -105,8 +119,7 @@ nav{
 
 /*Cuerpo*/
 main{
-    width: 77%;
-    margin-left: 22%;
+    margin-left: 25%;
 }
 
 
@@ -119,10 +132,14 @@ main{
     width: fit-content;
 }
 
-.title-aboutMe, strong, .title-projects{
+.title-aboutMe, strong, .title-projects, .title-edu{
     filter: drop-shadow(0 0 0.75rem var(--color2));
     color: var(--neonAzul);
     right: 10000000px;
+}
+
+.aboutme-txt{
+    font-size: large;
 }
 
 /*Proyectos*/
@@ -225,5 +242,27 @@ transform: translateY(1px); transition: all 0.5s;
 
 .logos-tech{
     width: 40px;
+}
+
+/*Educaction*/
+
+.education{
+    margin-bottom: 80px;
+}
+
+.certificado{
+    padding-top: 10px;
+}
+
+/*Footer*/
+footer{
+    position: relative;
+    bottom: 0;
+    left: 20%; 
+    width: calc(100% - 20%); 
+    height: 100px; 
+    padding-left: 20px;
+    background-color: var(--color6);
+    display: flex;
 }
 
