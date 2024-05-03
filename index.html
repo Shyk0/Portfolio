@@ -1,81 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="IMG/Logo2.svg">
-  <title>Portafolio</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="IMG/Logo2.svg" />
+    <title>Portafolio</title>
+  </head>
+  <body>
     <header>
       <nav>
         <section class="fotoperfil">
-          <img src="IMG/Logo.svg" alt="" class="logo">
+          <img src="IMG/Logo.svg" alt="" class="logo" />
         </section>
         <section class="links">
-          <section class="links-web ">
-            <a href="" class="links-menu">Sobre mi</a>
-            <a href="" class="links-menu">Proyectos</a>
-            <a href="" class="links-menu">Experiencia laboral</a>
-            <a href="" class="links-menu">Contactame</a>
+          <section class="links-web">
+            <a href="#aboutMe" class="links-menu">Sobre mi</a>
+            <a href="#proyectos" class="links-menu">Porfolio</a>
+            <a href="#skills" class="links-menu">Habilidades</a>
+            <a href="#certificado" class="links-menu">Estudios</a>
+            <a href="#contact" class="links-menu">Contacto</a>
           </section>
-          <section class="links-network">
-              <div class="logos">
-                <a href=""><img src="IMG/Freecodecamp.svg" alt="Logo Freecodecamp" class="social-network"></a>
-                <a href=""><img src="IMG/Github.svg" alt="Logo github" class="social-network"></a>
-                <a href=""><img src="IMG/linkedin.svg" alt="Logo linkdin" class="social-network"></a>
-            </div>
+          <section class="gmail">
+            <img src="IMG/gmail.svg" alt="logo de gmail" class="gmail_logo" />
+            <p class="gmail_direction" id="gmail">marcanoj607@gmail.com</p>
           </section>
-        </section> 
+        </section>
       </nav>
     </header>
     <main>
-      <section class="aboutMe">
-          <h1 class="title-aboutMe">Sea bienvenido a mi portafolio</h1>
+      <section class="aboutMe" id="aboutMe">
+        <h1>Sea bienvenido a mi portafolio</h1>
         <div class="aboutme-txt">
-          <p>Hola! Mi nombre es <strong>Jose</strong> y este es mi portafolio.</p>
-          <p>Soy estudiante de soy estudiante de<strong> Desarrollo Web</strong>. Tengo experiencia en JS, HTML y CSS. Me gusta aprender y me gusta lo que hago!</p>
+          <p>
+            Hola! Mi nombre es <strong>Jose</strong> y este es mi portafolio.
+          </p>
+          <p>
+            Soy estudiante de soy estudiante de<strong> Desarrollo Web</strong>.
+            Tengo experiencia en JS, HTML y CSS. Me gusta aprender y me gusta lo
+            que hago!
+          </p>
         </div>
       </section>
-      <hr>
-      <section class="proyectos">
+      <hr />
+      <section class="proyectos" id="proyectos">
         <h1 class="title-projects">Mis proyectos</h1>
         <section class="cards">
-        <section class="card">
-          <img src="IMG/LogoRPG.jpeg" alt="" class="foto-proyecto"> 
-          <div class="info">
-            <a href="" target="_blank">
-              <h1>Juego RPG</h1>
-              <p>Dragon Repeller - Juego RPG</p>
-              <img src="IMG/LogoCSS.svg" alt="Logo de css" class="logos-tech">
-              <img src="IMG/LogoHTML.svg" alt="Logo de HTML" class="logos-tech">
-              <img src="IMG/LogoJS.svg" alt="Logo de JS" class="logos-tech">
-            </a> 
-          </div>
+          <section class="card">
+            <img src="IMG/LogoRPG.jpeg" alt="" class="foto-proyecto" />
+            <div class="info">
+              <a href="" target="_blank">
+                <h2>Juego RPG</h2>
+                <p>Dragon Repeller - Juego RPG</p>
+                <img
+                  src="IMG/LogoCSS.svg"
+                  alt="Logo de css"
+                  class="logos-tech"
+                />
+                <img
+                  src="IMG/LogoHTML.svg"
+                  alt="Logo de HTML"
+                  class="logos-tech"
+                />
+                <img src="IMG/LogoJS.svg" alt="Logo de JS" class="logos-tech" />
+              </a>
+            </div>
+          </section>
         </section>
       </section>
+      <hr />
+      <section class="skills" id="skills">
+        <h1>Mis habilidades</h1>
+        <div class="habilidades">
+          <img src="IMG/LogoHTML.svg" alt="" class="habilidadesIMG" />
+          <img src="IMG/LogoJS.svg" alt="" class="habilidadesIMG" />
+          <img src="IMG/LogoCSS.svg" alt="" class="habilidadesIMG" />
+        </div>
       </section>
-      <hr>
+      <hr />
       <section class="education">
         <div class="mi-educacion">
           <h1 class="title-edu">Mi educacion</h1>
         </div>
         <div class="certificados">
           <div class="certificado">
-            <a href="https://www.freecodecamp.org/certification/Shyko/responsive-web-design" target="_blank">Certificado de diseño responsive - Freecodecamp - 2024</a>
+            <a
+              href="https://www.freecodecamp.org/certification/Shyko/responsive-web-design"
+              target="_blank"
+              >Certificado de diseño responsive - Freecodecamp - 2024</a
+            >
           </div>
-          <div class="certificado">
-            <a href="https://www.freecodecamp.org/certification/Shyko/responsive-web-design" target="_blank">Certificado de diseño responsive - Freecodecamp - 2024</a>
+          <div class="certificado" id="certificado">
+            <a
+              href="https://www.freecodecamp.org/certification/Shyko/responsive-web-design"
+              target="_blank"
+              >Certificado de diseño responsive - Freecodecamp - 2024</a
+            >
           </div>
         </div>
       </section>
-    </main>
-    <footer>
-      <section class="contactame">
-        <p>Contactame!: marcanoj607@gmail.com</p>
-        <a href="">Si quieres puedes contactarme directamente atravez del numero: (+57) 3245600345</a>
+      <hr />
+      <h1>Contactame!</h1>
+      <section class="contact" id="contact">
+        <section class="contact_medium">
+          <div class="contact_network">
+            <a href="https://www.linkedin.com/in/rivero-jos3/" target="_blank">
+              <img src="IMG/linkedin.svg" alt="" class="network_logo" />
+            </a>
+          </div>
+          <div class="contact_network">
+            <a href="https://github.com/Shyk0" target="_blank">
+              <img src="IMG/Github.svg" alt="" class="network_logo" />
+            </a>
+          </div>
+        </section>
       </section>
-    </footer>
-</body>
+    </main>
+  </body>
 </html>
