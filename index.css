@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Afacad Flux", sans-serif;
+    font-size: large;
+}
+
+:root{
+    --color-background: #000;
+    --color-primary: #232323;
+    --color-secondary: #414141;
+    --color-tertiary: #59575a;
+    --color-quarternary: #0cd2bb;
+    --color-text: #fff;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--color-background);
+    color: var(--color-text);
+    margin: 0;
+}
+
+button {
+    padding: 10px;
+    margin: 10px;
+    background: none;
+    border: none;
+    border: 1px solid transparent; 
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--color-text);
+    position: relative;
+    transition: color 0.3s ease; 
+}
+
+button::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: var(--color-text);
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    color: var(--color-quarternary); /* Cambia el color del texto al hacer hover */
+}
+
+button:hover::before {
+    visibility: visible;
+    width: 100%;
+}
+
+.general_container {
+    background-color: var(--color-primary);
+    display: flex;
+    height: 100%; 
+    width: 72vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.menu {
+    width: 72vh;
+    height: 15vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    padding: 10px 20px;
+    background-color: var(--color-tertiary);
+    border-radius: 10px;
+}
+
+.logo_container {
+    margin: 8px;
+}
+
+.logo_container img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+.menu_container_option {
+    list-style: none;
+    margin: 0 10px;
+    position: relative; 
+}
+
+.menu_container_option a {
+    color: var(--color-text);
+    text-decoration: none;
+    position: relative;
+}
+
+.menu_container_option a::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: var(--color-text);
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu_container_option a:hover::before {
+    visibility: visible;
+    width: 100%;
+}
+
+.menu_container_option a:hover{
+    color: var(--color-quarternary);
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.aboutMe_container{
+    margin: 10px;
+    display: flex;
+    background: var(--color-tertiary);
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 90%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.aboutMe_presentation{
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+.aboutMe_container h1{
+    margin: 10px;
+    font-size: 1.2rem;
+}
+
+
+hr{
+    width: 90%;
+    margin: 10px;
+}
+
+.skills_container , .projects_container{
+    margin: 10px;
+    display: flex;
+    background: var(--color-tertiary);
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 90%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.skills_container h1{
+    margin: 10px;
+    font-size: 1.2rem;
+}
+
+.skill_wrapper{
+    padding-bottom: 15px ;
+    width: 85%;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.skills .wrapper_container{
+    background: var(--color-secondary);
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+.skills h2{
+    font-size: 1.5em;
+}
+
+.skills li{
+    list-style: none;
+    margin: 10px 0;
+    width: auto;
+    position: relative;
+}
+
+.progress-bar{
+    background-color: white;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 10px;
+    margin-top: 5px;
+}
+
+.progress {
+    background-color: var(--color-quarternary);
+    height: 100%;
+}
+
+.tailwind .progress{
+    width: 50%;
+}
+
+.react .progress{
+    width: 50%;
+}
+
+.bootstrap .progress{
+    width: 80%;
+}
+
+.javascript .progress{
+    width: 90%;
+}
+
+.node .progress{
+    width: 40%;
+}
+
+.java .progress{
+    width: 60%;
+}
+
+.sql .progress{
+    width: 30%;
+}
+
+.git .progress{
+    width: 60%;
+}
+
+.github .progress{
+    width: 70%;
+}
+
+.wrapper{
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #454545;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+@media (max-width: 768px){
+    .general_container{
+        width: 80%;
+    }
+
+    .menu{
+        width: 45vh;
+    }
+
+    .aboutMe_presentation{
+        padding: 10px;
+    }
+
+}
